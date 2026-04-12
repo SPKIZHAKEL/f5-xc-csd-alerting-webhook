@@ -75,7 +75,7 @@ Attacker → Victim App (Login Page) → F5 XC (CSD)
 
 ## 🐳 Deployment (Docker)
 
-### Run containers
+### Run containers 
 
 ```bash
 # Victim app
@@ -88,7 +88,17 @@ docker run -d -p 5000:5000 attacker
 docker build -t f5-webhook .
 docker run -d -p 4000:4000 f5-webhook
 ```
+### OR Run Docker compose file
 
+if using aws ec2 linux:
+```bash
+DOCKER_BUILDKIT=0 docker-compose up -d --build
+```
+for stopping and removing containers
+
+```bash
+docker-compose down
+```
 ---
 
 ## 🌐 Webhook Configuration
