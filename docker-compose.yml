@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  victim:
+    container_name: victim
+    build: ./victim-app
+    ports:
+      - "80:80"
+
+  attacker:
+    container_name: attacker
+    build: ./attacker
+    ports:
+      - "3000:3000"
+
+  webhook:
+    container_name: webhook
+    build: ./webhook
+    ports:
+      - "4000:4000"
+    depends_on:
+      - victim
