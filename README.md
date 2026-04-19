@@ -112,10 +112,16 @@ In F5 XC:
 ```
 http://<EC2-PUBLIC-IP>:4000/f5-alert
 ```
-
 * Trigger:
 
   * Client-Side Defense → Suspicious Domain
+
+
+imp:
+Also for CSD JS injection:
+Inside the route inject under js injection -> select after title tag -> script name and then verify if injection is proper (post starting of victim-app dockerfile)
+
+
 
 ---
 
